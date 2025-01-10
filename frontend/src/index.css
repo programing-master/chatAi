@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "DM Sans", sans-serif;
+}
+/**
+ * BASE
+ */
+ @layer base {
+    a,
+    img,
+    button {
+      @apply block;
+    }
+  
+    input {
+      @apply block
+      outline-none
+      bg-transparent
+      w-full;
+    }
+  
+    input[type='password'] {
+      @apply tracking-[5px];
+    }
+  
+    input[type='password']::placeholder {
+      @apply tracking-normal;
+    }
+  
+    body {
+      @apply bg-light-background 
+      dark:bg-dark-background 
+      text-light-onBackground
+      dark:text-dark-onBackground;
+    }
+  
+    ::-webkit-scrollbar {
+      @apply w-2
+      h-2
+      rounded-full;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      @apply bg-transparent
+      rounded-full;
+    }
+  
+    *:hover::-webkit-scrollbar-thumb {
+      @apply bg-light-onBackground/15
+      dark:bg-dark-onBackground/15;
+    }
+  }
+
+  @layer components{
+    /*TextField*/
+    .text-field-wrapper{
+      @apply relative;
+    }
+
+    .text-field{
+      @apply ring-1
+      ring-inset
+      ring-light-outline
+      dark:ring-dark-outline
+      bg-inherit
+      text-light-onSurface
+      dark:text-dark-onSurface
+      caret-light-primary
+      dark:caret-dark-primary
+      h-10
+      px-4
+      rounded-extraSmall
+      transition-shadow
+      duration-short3
+      ease-linear
+      hover:ring-light-onSurface
+      focus:ring-2
+      focus:ring-light-primary
+      focus:dark:ring-dark-primary
+      hover:dark:ring-dark-onSurface;
+
+      
+    }
+
+    .text-field::placeholder{
+      @apply opacity-0
+      transition-opacity
+    }
+
+    .text-field:focus::placeholder{
+      @apply opacity-100
+    }
+
+    .text-field-wrapper:hover .label-text{
+      @apply text-light-onSurface
+      dark:text-dark-onSurface
+    }
+    .btn{
+      @apply 
+      h-10
+      flex
+      justify-center
+      items-center
+      rounded-full
+      px-4
+      transition-shadow
+      duration-short3
+ease-standard
+hover:shadow-elevation1
+focus:shadow-none
+    }
+    .btn.filled.primary{
+@apply bg-light-primary
+
+}
+.btn.filled.primary:hover{
+  @apply bg-light-primary/90
+  transition-all
+  ease-in-out
+  
+  }
+
+
+
+:has(> .state-layer){
+  @apply relative 
+  overflow-hidden
+  isolate
+}
+
+.state-layer{
+  @apply absolute
+  inset-0
+  bg-[--state-layer-bg]
+ opacity-0
+  transition-opacity
+  duration-short3
+  ease-standard
+  pointer-events-none
+  select-none
+  -z-10
+}
+
+
+  }
