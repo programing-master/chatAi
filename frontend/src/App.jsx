@@ -92,7 +92,7 @@ function App () {
               />
               <button
                 type='submit'
-                className='bg-transparent rounded-full w-[30%] md:w-[10%] flex items-center gap-2 justify-center border bg-light-surfaceTint transition hover:border-light-surfaceTint/30'
+                className='bg-transparent text-red-500 rounded-full w-[30%] md:w-[10%] flex items-center gap-2 justify-center border bg-light-surfaceTint transition hover:border-light-surfaceTint/30'
               >
                 Send
                 <IoIosSend />
