@@ -70,7 +70,7 @@ function App () {
 
   return (
     <>
-      <PageTitle title='LuckyStream - Personal AI Assistant' />
+      <PageTitle title='AngelicaVibes - Personal AI Assistant' />
       <div className='w-full flex flex-col gap-1 min-h-[100vh] items-center  '>
         {/*Top app Bar*/}
         <ToastContainer />
